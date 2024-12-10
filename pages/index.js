@@ -148,11 +148,42 @@ const index = () => {
           />
         )}
 
-        {
-          loader && <Loader />
-        }
+        { loader && <Loader /> }
 
+        <Header
+          account={account}
+          CONNECT_WALLET={CONNECT_WALLET}
+          setAccount={setAccount}
+          setLoader={setLoader}
+          setOwnerModel={setOwnerModel}
+          shortenAddress={shortenAddress}
+          detail={detail}
+          currency={currency}
+          ownerModel={ownerModel}
+        />
 
+        <Sidebar/>
+
+        <Hero 
+          setBuyModel={setBuyModel}
+          account={account} 
+          CONNECT_WALLET={CONNECT_WALLET}
+          setAccount={setAccount}
+          setLoader={setLoader}
+          detail={detail}
+          addtokenToMetaMask={addtokenToMetaMask}
+        />
+
+        <About/>
+        <Features/>
+        <Token />
+        <TokenInfo detail={detail}/>
+        <Team/>
+        <Faq/>
+        <Contact/>
+        <Footer/>
+
+        
       </div>
     </>
   );
